@@ -1,0 +1,33 @@
+
+# This class simulates a parking ticket issued to a car.
+
+import math
+from PoliceOfficer import PoliceOfficer
+from ParkedCar import ParkedCar
+
+class ParkingTicket:
+    def __init__(self, car, officer_name, badge_number, illegalMinutes, fine):
+        self.car = car
+        self.officer_name = officer_name
+        self.badge_number = badge_number
+        self.illegalMinutes = illegalMinutes
+        self.fine = self.calculate_fine()
+
+    def calculate_fine(self):
+        hours = math.ceil(self.illegalMinutes / 60)
+        if hours <= 1:
+            return 25.00
+        else:
+            return 25.00 + (hours -1) * 10.00
+
+    def __str__(self):
+        return (
+            f"Parking Ticket"
+            f"Car: {self.car}"
+            f"Officer: {self.officer_name}"
+            f"Badge Number: {self.badge_number}"
+            f"Illegally Parked: {self.illegalMinutes}"
+            f"Fine: ${self.fine:.2f}")
+
+
+
