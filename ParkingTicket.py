@@ -2,8 +2,6 @@
 # This class simulates a parking ticket issued to a car.
 
 import math
-from PoliceOfficer import PoliceOfficer
-from ParkedCar import ParkedCar
 
 class ParkingTicket:
     def __init__(self, car, officer_name, badge_number, illegalMinutes, fine):
@@ -22,11 +20,11 @@ class ParkingTicket:
 
     def __str__(self):
         return (
-            f"Parking Ticket"
-            f"Car: {self.car}"
-            f"Officer: {self.officer_name}"
-            f"Badge Number: {self.badge_number}"
-            f"Illegally Parked: {self.illegalMinutes}"
+            f"Parking Ticket\n\n"
+            f"Car: {self.car}\n"
+            f"Officer: {self.officer_name}\n"
+            f"Badge Number: {self.badge_number}\n"
+            f"Illegally Parked: {self.illegalMinutes}\n"
             f"Fine: ${self.fine:.2f}")
 
 

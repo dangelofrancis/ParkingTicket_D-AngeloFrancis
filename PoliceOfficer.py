@@ -3,7 +3,6 @@
 
 import math
 from ParkingTicket import ParkingTicket
-from ParkingMeter import ParkingMeter
 
 class PoliceOfficer:
     def __init__(self, name, badge_number):

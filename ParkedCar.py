@@ -21,10 +21,10 @@ class ParkedCar:
 
     def __str__(self):
         return (
-            f"Make: {self.make}"
-            f"Model: {self.model}"
-            f"Color: {self.color}"
-            f" License Number: {self.license_number}"
+            f"Make: {self.make}, "
+            f"Model: {self.model}, "
+            f"Color: {self.color}, "
+            f" License Number: {self.license_number}, "
             f"Minutes Parked: {self.minutes_parked}")
 
 
